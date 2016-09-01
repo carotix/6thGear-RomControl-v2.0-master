@@ -1,66 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--/*      Created by Roberto Mariani and Anna Berkovitch, 2015-2016
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-        the Free Software Foundation, either version 3 of the License, or
-        (at your option) any later version.
-
-        This program is distributed in the hope that it will be useful,
-        but WITHOUT ANY WARRANTY; without even the implied warranty of
-        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-        GNU General Public License for more details.
-
-        You should have received a copy of the GNU General Public License
-        along with this program.  If not, see <http://www.gnu.org/licenses/>.*/-->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:wubydax="http://schemas.android.com/apk/res-auto">
-    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference
-        android:defaultValue="false"
-        android:key="enable_gear_custom_bg"
-        android:summaryOff="Disabled"
-        android:summaryOn="Enabled"
-        android:title="Enable custom background"/>
-    <PreferenceCategory
-        android:dependency="enable_gear_custom_bg"
-        android:title="InCallUI bg preferences">
-        <com.wubydax.romcontrol.v2.prefs.MyListPreference
-            android:defaultValue="0"
-            android:dependency="enable_gear_custom_bg"
-            android:entries="@array/custom_bg_type_entries"
-            android:entryValues="@array/custom_bg_type_values"
-            android:key="gear_custom_bg_type"
-            android:title="Background type"/>
-        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference
-            android:key="incallui_bg"
-            android:title="Select Bg image"/>
-        <com.wubydax.romcontrol.v2.prefs.MyListPreference
-            android:defaultValue="0"
-            android:dependency="enable_gear_custom_bg"
-            android:entries="@array/crop_entries"
-            android:entryValues="@array/crop_values"
-            android:key="gear_bg_crop_type"
-            android:title="Set Image Scaling Type"/>
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-            android:defaultValue="#00000000"
-            android:key="gear_bg_primary_color"
-            android:title="Select primary color"/>
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
-            android:defaultValue="#00000000"
-            android:key="gear_second_gradient_color"
-            android:title="Secondary Color (for gradient)"/>
-        <com.wubydax.romcontrol.v2.prefs.MyListPreference
-            android:defaultValue="0"
-            android:entries="@array/gradient_entries"
-            android:entryValues="@array/gradient_values"
-            android:key="gear_bg_gradient_orientation"
-            android:title="Gradient orientation"/>
-        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference
-            android:defaultValue="255"
-            android:key="gear_bg_opacity"
-            android:title="Background Opacity"
-            wubydax:maxValue="255"
-            wubydax:minValue="0"/>
-    </PreferenceCategory>
-
-
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wubydax="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="Phone Image Bg">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Enable custom background" android:key="enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <PreferenceCategory android:title="General bg preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Custom image preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Bg image" android:key="gear_bg_image_uri" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="Set Image Scaling Type" android:key="gear_bg_crop_type" android:defaultValue="0" android:entryValues="@array/crop_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Color and gradient preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Select primary color" android:key="gear_bg_primary_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Secondary Color (for gradient)" android:key="gear_second_gradient_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Gradient orientation" android:key="gear_bg_gradient_orientation" android:dependency="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Pulldown Image Bg">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Custom Background" android:key="enable_custom_bg" android:defaultValue="false" android:summaryOn="Custom bg enabled" android:summaryOff="Custom bg disabled" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image" android:key="notification_panel_bg" android:dependency="enable_custom_bg" />
+    </PreferenceScreen>
 </PreferenceScreen>
