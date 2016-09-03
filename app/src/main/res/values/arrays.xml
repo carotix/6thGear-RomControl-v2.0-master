@@ -242,9 +242,4 @@
         <item>120000</item>
         <item>300000</item>
     </string-array>
-    <string-array name="test">
-    <item>Normal</item>
-    <item>Bold</item>
-    <item>Italic</item>
-    <item>Bold italic</item>
 </resources>

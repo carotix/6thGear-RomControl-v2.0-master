@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="XDA Thread CarHDRom">
+        <intent android:action="android.intent.action.VIEW" android:data="http://forum.xda-developers.com/galaxy-s6-edge/development/rom-carhdrom-1-t3111519" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="CarHDRom OTA">
+        <intent android:action="android.intent.action.VIEW" android:data="https://mega.nz/#F!ENYWHQTB!FJ1up8ES53FJZOpWX36O1w" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Make a donation to Carotix">
+        <intent android:action="android.intent.action.VIEW" android:data="https://goo.gl/2FMCS6" />
+    </PreferenceScreen>
+</PreferenceScreen>
