@@ -2,62 +2,58 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Apps">
-        <PreferenceScreen android:title="Settings Apps">
-            <PreferenceScreen android:title="Adaway" android:summary="Delete Hosts">
+        <PreferenceScreen android:icon="@drawable/ic_tools" android:title="Settings Apps">
+            <PreferenceScreen android:icon="@drawable/ic_adaway" android:title="Adaway" android:summary="Delete Hosts">
                 <intent android:targetPackage="org.adaway" android:action="android.intent.action.MAIN" android:targetClass="org.adaway.ui.BaseActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Viper4AndroidFX" android:summary="Set Your Sound">
+            <PreferenceScreen android:icon="@drawable/ic_viper" android:title="Viper4AndroidFX" android:summary="Set Your Sound">
                 <intent android:targetPackage="com.vipercn.viper4android_v2" android:action="android.intent.action.MAIN" android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Quick Launcher" android:summary="Settings">
+            <PreferenceScreen android:icon="@drawable/ic_quicklauncher" android:title="Quick Launcher" android:summary="Settings">
                 <intent android:targetPackage="com.three.minit.quicklauncher" android:action="android.intent.action.MAIN" android:targetClass="com.three.minit.quicklauncher.MainPreferenceActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Toolbox" android:summary="Settings">
+            <PreferenceScreen android:icon="@drawable/ic_toolbox" android:title="Toolbox" android:summary="Settings">
                 <intent android:targetPackage="mobi.xperiacle.s5toolbox.addon" android:action="android.intent.action.MAIN" android:targetClass="mobi.xperiacle.s5toolbox.addon.ToolboxActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Torch Light" android:summary="Settings On Vol Up">
+            <PreferenceScreen android:icon="@drawable/ic_torch" android:title="Torch Light" android:summary="Settings On Vol Up">
                 <intent android:targetPackage="com.xpe.app.volume.torch.enabler" android:action="android.intent.action.MAIN" android:targetClass="com.xpe.app.volume.torch.enabler.MainActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Swipe Launcher" android:summary="Reset/Set App To Swipe">
+            <PreferenceScreen android:icon="@drawable/ic_swipe" android:title="Swipe Launcher" android:summary="Reset/Set App To Swipe">
                 <intent android:targetPackage="com.wubydax.geartwswipe" android:action="android.intent.action.MAIN" android:targetClass="com.wubydax.geartwswipe.ResetDialogActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="CarHD Volume Booster" android:summary="Settings Volume">
+            <PreferenceScreen android:icon="@drawable/ic_volbooster" android:title="CarHD Volume Booster" android:summary="Settings Volume">
                 <intent android:targetPackage="com.laransoft.volumeS6" android:action="android.intent.action.MAIN" android:targetClass="com.laransoft.volumeS6.main" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Faster GPS" android:summary="Set Your Location">
+            <PreferenceScreen android:icon="@drawable/ic_gpsfix" android:title="Faster GPS" android:summary="Set Your Location">
                 <intent android:targetPackage="org.fastergps" android:action="android.intent.action.MAIN" android:targetClass="org.fastergps.ui.BaseActivity" />
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="Mods">
-        <PreferenceScreen android:title="Mods">
-            <PreferenceScreen android:title="Multi DPI Changer" android:summary="Reboot UI Required">
+        <PreferenceScreen android:icon="@drawable/ic_ui" android:title="Mods">
+            <PreferenceScreen android:icon="@drawable/ic_dpi" android:title="Multi DPI Changer" android:summary="Reboot UI Required">
                 <intent android:targetPackage="com.wubydax.changedpi" android:action="android.intent.action.MAIN" android:targetClass="com.wubydax.changedpi.MainActivity" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Columns In Settings">
+            <PreferenceScreen android:icon="@drawable/ic_column" android:title="Columns In Settings">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/dashboard_cat_columns_entries" android:title="Amount of Columns in Category Section" android:key="category_columns" android:entryValues="@array/dashboard_cat_columns_values" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Touchwiz Launcher" android:summary="Reboot Required">
-                <PreferenceScreen android:title="Touchwiz Page Effects">
+            <PreferenceScreen android:icon="@drawable/ic_launcher" android:title="Touchwiz Launcher" android:summary="Reboot Required">
+                <PreferenceScreen android:icon="@drawable/ic_effects" android:title="Touchwiz Page Effects">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="1" android:entryValues="@array/tw_effect_values" />
                 </PreferenceScreen>
-                <PreferenceScreen android:title="Gesture On Home Screen" >
+                <PreferenceScreen android:icon="@drawable/ic_twgesture" android:title="Gesture On Home Screen">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Double tap" android:key="doubletap" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Up" android:key="swipe_up" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Down" android:key="swipe_down" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
                 </PreferenceScreen>
             </PreferenceScreen>
-            <PreferenceScreen android:title="Hide/Show Slider Brightness">
+            <PreferenceScreen android:icon="@drawable/ic_slider_brightness" android:title="Hide/Show Slider Brightness">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Brightness Slider" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="Currently Shown" android:summaryOff="Currently Hidden" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Scrollable Toggles" android:summary="Reboot UI Required">
+            <PreferenceScreen android:icon="@drawable/ic_scroll_toggles" android:title="Scrollable Toggles" android:summary="Reboot UI Required">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/toggle_scroll_entries" android:title="Scrollable Toggles Shown" android:key="sysui_qs_active_tiles" android:summary="Scrolling toggle number" android:defaultValue="10" android:entryValues="@array/toggle_scroll_values" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Cleaning Memory In CarHDRom Control">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show MemKiller" android:key="pekaka_memCleanView" android:summaryOn="Enabled" android:summaryOff="Disabled" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Memkiller color" android:key="db_inkeffect_pekaka_memkiller_picker" android:defaultValue="\#ff1caa00" alphaSlider="true" hexValue="true" />
-            </PreferenceScreen>
-            <PreferenceScreen android:title="Lockscreen Weather Texts" android:summary="Reboot UI Required">
+            <PreferenceScreen android:icon="@drawable/ic_weather" android:title="Lockscreen Weather Texts" android:summary="Reboot UI Required">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Text-degree Color" android:key="color_temp" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Text Color Max Temperature" android:key="color_high_temp" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Text Color Min Temperature" android:key="color_low_temp" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
@@ -66,11 +62,11 @@
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Text Sunset " android:key="color_sunset" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Weather Text" android:key="color_text" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Lockscreen Display Timeout" android:summary="Reboot UI Required">
+            <PreferenceScreen android:icon="@drawable/ic_delay" android:title="Lockscreen Display Timeout" android:summary="Reboot UI Required">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/display_timeout_entries" android:title="Lockscreen Display Timeout" android:key="display_timeout_delay" android:defaultValue="10000" android:entryValues="@array/display_timeout_values" />
             </PreferenceScreen>
-            <PreferenceScreen android:title="Open With">
-                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:defaultValue="true" android:key="default_app_selection_option" android:summaryOff="Hide" android:summaryOn="Show" android:title="Buttons Only-Once/Always"/>
+            <PreferenceScreen android:icon="@drawable/ic_open" android:title="Open With">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Buttons Only-Once/Always" android:key="default_app_selection_option" android:defaultValue="true" android:summaryOn="Show" android:summaryOff="Hide" />
             </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>

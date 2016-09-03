@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wubydax="http://schemas.android.com/apk/res-auto">
-    <PreferenceScreen android:title="Phone Image Bg">
+    <PreferenceScreen android:icon="@drawable/ic_phone_bg" android:title="Phone Image Bg">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Enable custom background" android:key="enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
         <PreferenceCategory android:title="General bg preferences" android:dependency="enable_gear_custom_bg">
             <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" />
@@ -16,7 +16,7 @@
             <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Gradient orientation" android:key="gear_bg_gradient_orientation" android:dependency="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen android:title="Pulldown Image Bg">
+    <PreferenceScreen android:icon="@drawable/ic_pulldown_bg" android:title="Pulldown Image Bg">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Custom Background" android:key="enable_custom_bg" android:defaultValue="false" android:summaryOn="Custom bg enabled" android:summaryOff="Custom bg disabled" />
         <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Image" android:key="notification_panel_bg" android:dependency="enable_custom_bg" />
     </PreferenceScreen>

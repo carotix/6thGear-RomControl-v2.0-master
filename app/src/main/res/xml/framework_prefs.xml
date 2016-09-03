@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceScreen android:title="3Minit Battery Mod" android:summary="Custom Batteries">
+    <PreferenceScreen android:icon="@drawable/ic_3m" android:title="3Minit Battery Mod" android:summary="Custom Batteries">
         <intent android:targetPackage="com.three.minit.minitbatterysettings.free" android:action="android.intent.action.MAIN" android:targetClass="com.three.minit.minitbatterysettings.MainActivity" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="Network traffic preferences">
+    <PreferenceScreen android:icon="@drawable/ic_traffic" android:title="Network traffic preferences">
         <PreferenceCategory android:title="Network data">
-            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:title="Displayed traffic info" android:key="network_traffic_state" android:defaultValue="3" app:dependentValue="0" android:entryValues="@array/traffic_state_values" android:entries="@array/traffic_state_items"/>
-            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Display data in Bytes" android:summaryOff="Displayed in Bits (default)" android:summaryOn="Displayed in Bytes" android:defaultValue="false" android:key="network_traffic_unit" android:dependency="network_traffic_state"/>
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/traffic_state_items" android:title="Displayed traffic info" android:key="network_traffic_state" android:defaultValue="3" android:entryValues="@array/traffic_state_values" app:dependentValue="0" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Display data in Bytes" android:key="network_traffic_unit" android:dependency="network_traffic_state" android:defaultValue="false" android:summaryOn="Displayed in Bytes" android:summaryOff="Displayed in Bits (default)" />
         </PreferenceCategory>
         <PreferenceCategory android:title="Arrows display preferences" android:dependency="network_traffic_state">
-            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show traffic arrows" android:key="network_traffic_show_arrows" android:defaultValue="true" android:summaryOff="Arrows hidden" android:summaryOn="Arrows shown" android:dependency="network_traffic_state"/>
-            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:title="Arrows position" android:key="network_traffic_arrows_position" android:dependency="network_traffic_show_arrows" android:defaultValue="0" android:entryValues="@array/arrow_position_values" android:entries="@array/arrow_position_entries"/>
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show traffic arrows" android:key="network_traffic_show_arrows" android:dependency="network_traffic_state" android:defaultValue="true" android:summaryOn="Arrows shown" android:summaryOff="Arrows hidden" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/arrow_position_entries" android:title="Arrows position" android:key="network_traffic_arrows_position" android:dependency="network_traffic_show_arrows" android:defaultValue="0" android:entryValues="@array/arrow_position_values" />
         </PreferenceCategory>
         <PreferenceCategory android:title="Display options" android:dependency="network_traffic_state">
-            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Autohide on low traffic" android:key="network_traffic_autohide" android:defaultValue="false" android:summaryOff="Displayed always" android:summaryOn="Autohide enabled"/>
-            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Autohide threshold" app:unitsValue="Kb" app:maxValue="100" android:key="network_traffic_threshold" android:defaultValue="10" android:dependency="network_traffic_autohide"/>
-            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:title="Font style" android:key="network_traffic_text_style" android:defaultValue="0" android:entries="@array/traffic_style_entries" android:entryValues="@array/traffic_style_entry_values"/>
-            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Text size scale factor" android:key="network_traffic_scale" app:maxValue="10" android:defaultValue="10"/>
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Autohide on low traffic" android:key="network_traffic_autohide" android:defaultValue="false" android:summaryOn="Autohide enabled" android:summaryOff="Displayed always" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Autohide threshold" android:key="network_traffic_threshold" android:dependency="network_traffic_autohide" android:defaultValue="10" app:maxValue="100" app:unitsValue="Kb" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/traffic_style_entries" android:title="Font style" android:key="network_traffic_text_style" android:defaultValue="0" android:entryValues="@array/traffic_style_entry_values" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Text size scale factor" android:key="network_traffic_scale" android:defaultValue="10" app:maxValue="10" />
         </PreferenceCategory>
         <PreferenceCategory android:title="Network traffic colors" android:dependency="network_traffic_state">
-            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Separate colors for text and arrows" android:key="network_traffic_global_color" android:defaultValue="true" android:summaryOn="Text and arrows can be colored separately" android:summaryOff="Text color will apply to arrows as well"/>
-            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Traffic text color" android:key="network_traffic_color" android:defaultValue="#ffffff"/>
-            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Traffic arrows color" android:key="network_traffic_arrow_color" android:defaultValue="#ffffff" android:dependency="network_traffic_global_color"/>
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Separate colors for text and arrows" android:key="network_traffic_global_color" android:defaultValue="true" android:summaryOn="Text and arrows can be colored separately" android:summaryOff="Text color will apply to arrows as well" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Traffic text color" android:key="network_traffic_color" android:defaultValue="\#ffffff" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Traffic arrows color" android:key="network_traffic_arrow_color" android:dependency="network_traffic_global_color" android:defaultValue="\#ffffff" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen android:title="Virtual lock button right" android:summary="Reboot UI Required">
-        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="On/Off" android:key="VirtualLockRight"  android:defaultValue="true" android:summaryOn="Activ" android:summaryOff="Inactiv" />
+    <PreferenceScreen android:icon="@drawable/ic_lock" android:title="Virtual lock button right" android:summary="Reboot UI Required">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="On/Off" android:key="VirtualLockRight" android:defaultValue="true" android:summaryOn="Activ" android:summaryOff="Inactiv" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="Battery Bar Pulldown On Top" android:summary="Display Line on top for battery">
+    <PreferenceScreen android:icon="@drawable/ic_batterybar" android:title="Battery Bar Pulldown On Top" android:summary="Display Line on top for battery">
         <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_entries" android:title="Battery Bar (Hide-Show)" android:key="battery_bar" android:summary="%s" android:defaultValue="0" android:entryValues="@array/battery_bar_values" />
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Battery bar animation" android:key="battery_bar_animate" android:defaultValue="true" android:summaryOn="Charging animation enabled" android:summaryOff="Animation disabled" />
         <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_style_entries" android:title="Battery bar style" android:key="battery_bar_style" android:summary="%s" android:defaultValue="1" android:entryValues="@array/battery_bar_style_values" />
         <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_thickness_entries" android:title="Thickness of battery bar" android:key="battery_bar_thickness" android:summary="%s" android:defaultValue="2" android:entryValues="@array/battery_bar_thickness_values" />
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Battery Bar Color" android:key="battery_bar_color" android:summary="Choose color of battery bar" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="Percentage Battery Color" android:summary="Reboot UI Required">
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Percentage Color" android:key="battery_text_color" android:defaultValue="#ffffffff" android:summary="Choose battery percent color" />
+    <PreferenceScreen android:icon="@drawable/ic_percentage" android:title="Percentage Battery Color" android:summary="Reboot UI Required">
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Percentage Color" android:key="battery_text_color" android:summary="Choose battery percent color" android:defaultValue="\#ffffffff" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="Potato Clock" android:summary="Settings Statusbar Clock">
+    <PreferenceScreen android:icon="@drawable/ic_potato_clock" android:title="Potato Clock" android:summary="Settings Statusbar Clock">
         <intent android:targetPackage="com.potato.clock.main" android:action="android.intent.action.MAIN" android:targetClass="com.potato.clock.main.Main" />
     </PreferenceScreen>
-    <PreferenceScreen android:title="Potato Gradient" android:summary="Settings Statusbar Background">
+    <PreferenceScreen android:icon="@drawable/ic_potato_gradient" android:title="Potato Gradient" android:summary="Settings Statusbar Background">
         <intent android:targetPackage="com.potato.gradientapp" android:action="android.intent.action.MAIN" android:targetClass="com.potato.gradientapp.MainActivity" />
     </PreferenceScreen>
 </PreferenceScreen>
