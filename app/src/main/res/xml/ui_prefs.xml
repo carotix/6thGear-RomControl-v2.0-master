@@ -68,6 +68,9 @@
             <PreferenceScreen android:icon="@drawable/ic_open" android:title="Open With">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Buttons Only-Once/Always" android:key="default_app_selection_option" android:defaultValue="true" android:summaryOn="Show" android:summaryOff="Hide" />
             </PreferenceScreen>
+            <PreferenceScreen android:icon="@drawable/ic_animation" android:title="Toast Animations">
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/toast_animation_entries" android:title="Toast Animations UI Framework " android:key="animation_toast" android:summary="%s" android:defaultValue="7" android:entryValues="@array/toast_animation_values" />
+            </PreferenceScreen>
         </PreferenceScreen>
     </PreferenceCategory>
 </PreferenceScreen>

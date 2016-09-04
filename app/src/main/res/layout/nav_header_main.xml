@@ -25,6 +25,11 @@
         android:scaleType="centerCrop"
         android:src="@drawable/header"/>
 
+    <ImageView android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_marginTop="30.0dip"
+        android:src="@drawable/carotix_banner" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
