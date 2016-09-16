@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="Apps">
         <PreferenceScreen android:icon="@drawable/ic_tools" android:title="Settings Apps">
             <PreferenceScreen android:icon="@drawable/ic_adaway" android:title="Adaway" android:summary="Delete Hosts">
                 <intent android:targetPackage="org.adaway" android:action="android.intent.action.MAIN" android:targetClass="org.adaway.ui.BaseActivity" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_viper" android:title="Viper4AndroidFX" android:summary="Set Your Sound">
-                <intent android:targetPackage="com.vipercn.viper4android_v2" android:action="android.intent.action.MAIN" android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
+                <intent android:targetPackage="com.audlabs.viperfx" android:action="android.intent.action.MAIN" android:targetClass="com.audlabs.viperfx.main.MainActivity" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_quicklauncher" android:title="Quick Launcher" android:summary="Settings">
                 <intent android:targetPackage="com.three.minit.quicklauncher" android:action="android.intent.action.MAIN" android:targetClass="com.three.minit.quicklauncher.MainPreferenceActivity" />
@@ -31,15 +31,15 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Mods">
         <PreferenceScreen android:icon="@drawable/ic_ui" android:title="Mods">
-            <PreferenceScreen android:icon="@drawable/ic_dpi" android:title="Multi DPI Changer" android:summary="Reboot UI Required">
+            <PreferenceScreen android:icon="@drawable/ic_dpi" android:title="Multi DPI Changer" android:summary="Reboot Device Required">
                 <intent android:targetPackage="com.wubydax.changedpi" android:action="android.intent.action.MAIN" android:targetClass="com.wubydax.changedpi.MainActivity" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_column" android:title="Columns In Settings">
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/dashboard_cat_columns_entries" android:title="Amount of Columns in Category Section" android:key="category_columns" android:entryValues="@array/dashboard_cat_columns_values" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/dashboard_cat_columns_entries" android:title="Amount of Columns in Category Section" android:key="category_columns" android:defaultValue="2" android:entryValues="@array/dashboard_cat_columns_values" />
             </PreferenceScreen>
-            <PreferenceScreen android:icon="@drawable/ic_launcher" android:title="Touchwiz Launcher" android:summary="Reboot Required">
+            <PreferenceScreen android:icon="@drawable/ic_launcher" android:title="Touchwiz Launcher" android:summary="Reboot Device Required">
                 <PreferenceScreen android:icon="@drawable/ic_effects" android:title="Touchwiz Page Effects">
-                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="1" android:entryValues="@array/tw_effect_values" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="3" android:entryValues="@array/tw_effect_values" />
                 </PreferenceScreen>
                 <PreferenceScreen android:icon="@drawable/ic_twgesture" android:title="Gesture On Home Screen">
                     <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Double tap" android:key="doubletap" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
@@ -50,8 +50,16 @@
             <PreferenceScreen android:icon="@drawable/ic_slider_brightness" android:title="Hide/Show Slider Brightness">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Brightness Slider" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="Currently Shown" android:summaryOff="Currently Hidden" />
             </PreferenceScreen>
-            <PreferenceScreen android:icon="@drawable/ic_scroll_toggles" android:title="Scrollable Toggles" android:summary="Reboot UI Required">
+            <PreferenceScreen android:icon="@drawable/ic_color_toggle" android:title="Toggle">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/toggle_scroll_entries" android:title="Scrollable Toggles Shown" android:key="sysui_qs_active_tiles" android:summary="Scrolling toggle number" android:defaultValue="10" android:entryValues="@array/toggle_scroll_values" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle On Color" android:key="toggle_icon_on_color" android:summary="Reboot UI Required" android:defaultValue="-14318119" hexValue="true" alphaSlider="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Off Color" android:key="toggle_icon_off_color" android:summary="Reboot UI Required" android:defaultValue="1293831800" hexValue="true" alphaSlider="true" />
+                <PreferenceScreen android:layout="@layout/carotix_toggle1" android:key="od_logo" />
+                <PreferenceScreen android:layout="@layout/carotix_toggle2" android:key="od_logo" />
+                <PreferenceScreen android:layout="@layout/carotix_toggle3" android:key="od_logo" />
+                <PreferenceScreen android:layout="@layout/carotix_toggle4" android:key="od_logo" />
+                <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="Toggles Background" android:key="toggle_buttons_background" android:defaultValue="0" app:dependentValue="0" app:drawableArray="@array/toggle_drawables" app:entryList="@array/toggle_buttons_background_entries" app:entryValuesList="@array/toggle_buttons_background_values" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Button Background Color" android:key="toggle_buttons_background_color" android:summary="Choose the color to toggle style Stock" android:defaultValue="-1" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_weather" android:title="Lockscreen Weather Texts" android:summary="Reboot UI Required">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Text-degree Color" android:key="color_temp" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />

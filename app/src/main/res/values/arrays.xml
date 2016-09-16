@@ -52,10 +52,6 @@
         <item>Light theme</item>
         <item>Dark theme</item>
     </string-array>
-    <array name="thumbnail_drawables">
-        <item>@drawable/icon_6</item>
-        <item>@drawable/icon_5</item>
-    </array>
     <string-array name="thumbnail_items">
         <item>Icon 1</item>
         <item>Icon 2</item>
@@ -278,4 +274,76 @@
         <item>14</item>
         <item>15</item>
     </string-array>
+    <array name="toggle_bg_drawables">
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_01</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_02</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_03</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_04</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_05</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_06</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_07</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_08</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_09</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_10</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_11</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_12</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_13</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_14</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_15</item>
+    </array>
+    <string-array name="toggle_buttons_background_entries">
+        <item>Style 01 Transparent Default</item>
+        <item>Style 02</item>
+        <item>Style 03</item>
+        <item>Style 04</item>
+        <item>Style 05</item>
+        <item>Style 06</item>
+        <item>Style 07</item>
+        <item>Style 08</item>
+        <item>Style 09</item>
+        <item>Style 10</item>
+        <item>Style 11</item>
+        <item>Style 12</item>
+        <item>Style 13</item>
+        <item>Style 14</item>
+        <item>Style 15</item>
+        <item>Style 16</item>
+    </string-array>
+    <string-array name="toggle_buttons_background_values">
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+    <array name="toggle_drawables">
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_01</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_02</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_03</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_04</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_05</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_06</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_07</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_08</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_09</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_10</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_11</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_12</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_13</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_14</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal_15</item>
+    </array>
 </resources>
