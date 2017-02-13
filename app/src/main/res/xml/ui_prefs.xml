@@ -37,29 +37,46 @@
             <PreferenceScreen android:icon="@drawable/ic_column" android:title="Columns In Settings">
                 <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/dashboard_cat_columns_entries" android:title="Amount of Columns in Category Section" android:key="category_columns" android:defaultValue="2" android:entryValues="@array/dashboard_cat_columns_values" />
             </PreferenceScreen>
-            <PreferenceScreen android:icon="@drawable/ic_launcher" android:title="Touchwiz Launcher" android:summary="Reboot Device Required">
+            <PreferenceScreen android:icon="@drawable/ic_multiuser" android:title="Multiuser">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Multi-user Avatar" android:key="multiuser_avatar" android:defaultValue="false" android:summaryOn="Multi-user Avatar shown" android:summaryOff="Multi-user Avatar hidden" app:packageNameToKill="com.android.systemui" />
+            </PreferenceScreen>
+            <PreferenceScreen android:icon="@drawable/ic_launcher" android:title="Touchwiz Launcher">
                 <PreferenceScreen android:icon="@drawable/ic_effects" android:title="Touchwiz Page Effects">
-                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="3" android:entryValues="@array/tw_effect_values" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="3" android:entryValues="@array/tw_effect_values" app:packageNameToKill="com.sec.android.app.launcher" />
                 </PreferenceScreen>
                 <PreferenceScreen android:icon="@drawable/ic_twgesture" android:title="Gesture On Home Screen">
-                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Double tap" android:key="doubletap" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
-                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Up" android:key="swipe_up" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
-                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Down" android:key="swipe_down" android:summary="%s" android:entryValues="@array/launcher_gesture_values" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Double tap" android:key="doubletap" android:summary="%s" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Up" android:key="swipe_up" android:summary="%s" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
+                    <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Down" android:key="swipe_down" android:summary="%s" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
                 </PreferenceScreen>
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_slider_brightness" android:title="Hide/Show Slider Brightness">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Brightness Slider" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="Currently Shown" android:summaryOff="Currently Hidden" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_color_toggle" android:title="Toggle">
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/toggle_scroll_entries" android:title="Scrollable Toggles Shown" android:key="sysui_qs_active_tiles" android:summary="Scrolling toggle number" android:defaultValue="10" android:entryValues="@array/toggle_scroll_values" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle On Color" android:key="toggle_icon_on_color" android:summary="Reboot UI Required" android:defaultValue="-14318119" hexValue="true" alphaSlider="true" />
-                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Off Color" android:key="toggle_icon_off_color" android:summary="Reboot UI Required" android:defaultValue="1293831800" hexValue="true" alphaSlider="true" />
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/toggle_scroll_entries" android:title="Scrollable Toggles Shown" android:key="sysui_qs_active_tiles" android:summary="Scrolling toggle number" android:defaultValue="10" android:entryValues="@array/toggle_scroll_values" app:packageNameToKill="com.android.systemui" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle On Color" android:key="toggle_icon_on_color" android:summary="Choose your color" android:defaultValue="-14318119" app:packageNameToKill="com.android.systemui" hexValue="true" alphaSlider="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Off Color" android:key="toggle_icon_off_color" android:summary="Choose your color" android:defaultValue="1293831800" app:packageNameToKill="com.android.systemui" hexValue="true" alphaSlider="true" />
                 <PreferenceScreen android:layout="@layout/carotix_toggle1" android:key="od_logo" />
                 <PreferenceScreen android:layout="@layout/carotix_toggle2" android:key="od_logo" />
                 <PreferenceScreen android:layout="@layout/carotix_toggle3" android:key="od_logo" />
                 <PreferenceScreen android:layout="@layout/carotix_toggle4" android:key="od_logo" />
                 <com.wubydax.romcontrol.v2.prefs.ThumbnailListPreference android:title="Toggles Background" android:key="toggle_buttons_background" android:defaultValue="0" app:dependentValue="0" app:drawableArray="@array/toggle_drawables" app:entryList="@array/toggle_buttons_background_entries" app:entryValuesList="@array/toggle_buttons_background_values" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Button Background Color" android:key="toggle_buttons_background_color" android:summary="Choose the color to toggle style Stock" android:defaultValue="-1" />
+            </PreferenceScreen>
+            <PreferenceScreen android:icon="@drawable/ic_volslider" android:title="Volume Panel">
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Volume Panel Background" android:key="volume_panel_color" android:defaultValue="\#010101" hexValue="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Volume Panel Text" android:key="volume_title_color" android:defaultValue="\#0099ff" hexValue="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Volume Panel Thumb" android:key="volume_thumb_color" android:defaultValue="\#0099ff" hexValue="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Volume Progress Bar Background" android:key="volume_progress_bar_bg_color" android:defaultValue="\#ffffff" hexValue="true" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Volume Progress Bar" android:key="volume_progress_bar_color" android:defaultValue="\#0099ff" hexValue="true" />
+            </PreferenceScreen>
+            <PreferenceScreen android:icon="@drawable/ic_memclean" android:title="Cleaning Memory In CarHDRom Control">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show MemKiller" android:key="pekaka_memCleanView" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Memkiller color" android:key="db_inkeffect_pekaka_memkiller_picker" android:defaultValue="\#ff1caa00" alphaSlider="true" hexValue="true" />
+            </PreferenceScreen>
+            <PreferenceScreen android:icon="@drawable/ic_ambient" android:title="Ambient Display">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Hide Ambient Display" android:key="ambient_display_active" android:summaryOn="ambient display is off" android:summaryOff="ambient display is on" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_weather" android:title="Lockscreen Weather Texts" android:summary="Reboot UI Required">
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Text-degree Color" android:key="color_temp" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
@@ -69,9 +86,11 @@
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Text Location" android:key="color_location" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Text Sunset " android:key="color_sunset" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
                 <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Weather Text" android:key="color_text" android:summary="Choose Color" android:defaultValue="\#ffffffff" alphaSlider="false" hexValue="true" />
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Show or Hide Barometer" android:key="pressure_enable" android:summaryOn="Show Barometer" android:summaryOff="Hide Barometer" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Colorized Barometer Text" android:key="lockscreen_barometer_text_color" android:summary="Choose Color" android:defaultValue="0xffffffff" alphaSlider="true" hexValue="true" />
             </PreferenceScreen>
-            <PreferenceScreen android:icon="@drawable/ic_delay" android:title="Lockscreen Display Timeout" android:summary="Reboot UI Required">
-                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/display_timeout_entries" android:title="Lockscreen Display Timeout" android:key="display_timeout_delay" android:defaultValue="10000" android:entryValues="@array/display_timeout_values" />
+            <PreferenceScreen android:icon="@drawable/ic_delay" android:title="Lockscreen Display Timeout">
+                <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/display_timeout_entries" android:title="Lockscreen Display Timeout" android:key="display_timeout_delay" android:defaultValue="10000" android:entryValues="@array/display_timeout_values" app:packageNameToKill="com.android.systemui" />
             </PreferenceScreen>
             <PreferenceScreen android:icon="@drawable/ic_open" android:title="Open With">
                 <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Buttons Only-Once/Always" android:key="default_app_selection_option" android:defaultValue="true" android:summaryOn="Show" android:summaryOff="Hide" />
