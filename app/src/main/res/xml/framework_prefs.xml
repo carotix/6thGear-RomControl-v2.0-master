@@ -25,8 +25,18 @@
             <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Traffic arrows color" android:key="network_traffic_arrow_color" android:dependency="network_traffic_global_color" android:defaultValue="\#ffffff" />
         </PreferenceCategory>
     </PreferenceScreen>
-    <PreferenceScreen android:icon="@drawable/ic_lock" android:title="Virtual lock button right" android:summary="Reboot UI Required">
-        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="On/Off" android:key="VirtualLockRight" android:defaultValue="true" android:summaryOn="Activ" android:summaryOff="Inactiv" />
+    <PreferenceScreen android:icon="@drawable/ic_lock" android:title="Virtual Buttons" android:summary="Lock - Home - Recent">
+        <PreferenceScreen android:title="Lock Button">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Right side" android:key="VirtualLockRight" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" app:packageNameToKill="com.android.systemui" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Home Button">
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Left side" android:key="cocoyaya_leftcornerhome" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Center" android:key="cocoyaya_centerhome" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Recent Button">
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Left side" android:key="cocoyaya_leftcornertask" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" />
+            <com.wubydax.romcontrol.v2.prefs.MyCheckBoxPreference android:title="Center" android:key="cocoyaya_centertask" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" />
+        </PreferenceScreen>
     </PreferenceScreen>
     <PreferenceScreen android:icon="@drawable/ic_batterybar" android:title="Battery Bar Pulldown On Top" android:summary="Display Line on top for battery">
         <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/battery_bar_entries" android:title="Battery Bar (Hide-Show)" android:key="battery_bar" android:summary="%s" android:defaultValue="0" android:entryValues="@array/battery_bar_values" />
